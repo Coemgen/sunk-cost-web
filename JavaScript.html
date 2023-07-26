@@ -526,7 +526,7 @@ function viewDrawings(gameName) {
         $("thead tr").append("<th>" + game.bonus + "</th>");
     }
     $("thead tr").append("<th class=\"text-right\">Jackpot</th>");
-    drawsTempArr.reverse().slice(0, 20).forEach(function (drawObj, index) {
+    drawsTempArr.reverse().slice(0, 10).forEach(function (drawObj, index) {
         let date = drawObj.drawDate;
         $("tbody").append(
             "<tr title=\"Check for winnings\" " +
