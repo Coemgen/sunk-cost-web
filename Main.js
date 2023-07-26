@@ -1,5 +1,5 @@
 /*jslint browser, maxlen: 80, white*/
-/*global 
+/*global
 CacheService, HtmlService, Logger, PropertiesService, Session,
 SpreadsheetApp
 */
@@ -57,8 +57,8 @@ function getActiveNums(sheet) {
     data: sheet.getDataRange()
       .getDisplayValues()
       .filter((row, idx) => {
-        var d = new Date(row[9]);
-        return idx === 0 || d >= t;
+        var d = row[9] ? new Date(row[9]) : undefined;
+        return idx === 0 || !d || d >= t;
       })
   };
 }
